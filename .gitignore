@@ -1,0 +1,13 @@
+# .gitignore
+BlankCordovaApp_TS/[Pp]lugins/android.json
+BlankCordovaApp_TS/[Pp]lugins/windows.json
+BlankCordovaApp_TS/[Pp]lugins/wp8.json
+BlankCordovaApp_TS/[Pp]lugins/remote_ios.json
+BlankCordovaApp_TS/[Pp]latforms/
+
+BlankCordovaApp_TS/bin/
+BlankCordovaApp_TS/bld/
+BlankCordovaApp_TS/node_modules/
+
+.JustCode/
+.vs
