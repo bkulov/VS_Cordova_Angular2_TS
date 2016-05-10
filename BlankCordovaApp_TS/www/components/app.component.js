@@ -18,6 +18,20 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             AppComponent = (function () {
                 function AppComponent() {
                 }
+                AppComponent.prototype.ngOnInit = function () {
+                    // add event listener to the battery status event
+                    window.addEventListener("batterystatus", this._onBatteryStatus, false);
+                };
+                AppComponent.prototype._onBatteryStatus = function (status) {
+                    function alertDismissed() {
+                        // do something
+                    }
+                    navigator.notification.alert('Battery percentage: ' + status.level + "; isPlugged: " + status.isPlugged, // message
+                    alertDismissed, // callback
+                    'Battery status', // title
+                    'Done' // buttonName
+                    );
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
